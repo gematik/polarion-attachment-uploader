@@ -72,7 +72,7 @@ impl NetworkClient {
         if let Some(form) = form {
             request = request.multipart(form);
         }
-
+        
         NetworkClient::log_request("PATCH", url.as_str());
         let response = request.send()?;
         NetworkClient::log_response(&response);
@@ -195,7 +195,7 @@ pub(crate) fn patch_attachment(
     form = form.text("resource", resource);
 
     let file = reqwest::blocking::multipart::Part::file(path)?.file_name(name.to_string());
-    form = form.part("files", file);
+    form = form.part("content", file);
 
     client.patch(&url_path, Some(form))?.error_for_status()?;
 
