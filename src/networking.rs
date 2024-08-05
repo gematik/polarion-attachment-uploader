@@ -72,7 +72,7 @@ impl NetworkClient {
         if let Some(form) = form {
             request = request.multipart(form);
         }
-        
+
         NetworkClient::log_request("PATCH", url.as_str());
         let response = request.send()?;
         NetworkClient::log_response(&response);
