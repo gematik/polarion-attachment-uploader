@@ -1,3 +1,5 @@
+<img align="right" width="250" height="47" src="gematik.png"/>
+
 [![Lint](https://github.com/gematik/polarion-attachment-uploader/actions/workflows/lint.yml/badge.svg)](https://github.com/gematik/polarion-attachment-uploader/actions/workflows/lint.yml)
 
 # Polarion Attachment Uploader
